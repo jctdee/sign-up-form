@@ -1,0 +1,210 @@
+@font-face {
+  font-family: Norse;
+  src: url(assets/Norse-Bold.otf);
+}
+
+@font-face {
+  font-family: Didot;
+  src: url(assets/Didot\ Regular.ttf);
+}
+
+@font-face {
+  font-family: GeorgiaLight;
+  src: url(assets/SD_Georgia_Light.ttf);
+}
+
+@font-face {
+  font-family: Julius;
+  src: url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 5%;
+  background: linear-gradient(#0D324D, #7f5a83);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-divider { 
+  width: 100%;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.left-container {
+  background-image: url(assets/newbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.left-elements {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.element-background > span {
+  color: white;
+  font-size: 4rem;
+  font-family: Norse;
+}
+
+
+img {
+  max-width: 15%;
+}
+
+.element-background {
+  width: 100%;
+}
+
+.right-container {
+  background: #0D324D;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+.right-description {
+  height: 25%;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+
+.right-description > p:last-child {
+  font-style: italic;
+}
+
+.right-form {
+  width: 100%;
+  background: #134970;
+  height: 50%;
+  font-family: 'Roboto', Arial;
+}
+
+form {
+  width: 75%;
+  padding: 20px 40px 20px 40px;
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 25px;
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row > div > label {
+  letter-spacing: 1.5px;
+}
+
+.form-row > div > input {
+  width: 75%;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.submit-container {
+  padding: 40px;
+}
+
+.submit-container button[type="submit"] {
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #f5c10a;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+.submit-container button:hover {
+  cursor: pointer;
+}
+
+a {
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .right-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .body-divider {
+    width: 100%;
+    height: 100vh;
+    display: block;
+  }
+
+  .right-description {
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form > h1 {
+    text-align: center;
+  }
+
+  .form-row > div > input {
+    width: 100%;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .submit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
